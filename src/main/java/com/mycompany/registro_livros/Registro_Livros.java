@@ -7,9 +7,10 @@ public class Registro_Livros {
 
     public static void main(String[] args) {
         
-        Livro c = new Livro("A arte nao precisa de justificativa","Rookemaker", 
-                "Globo", "Sao paulo",1996,2);
+        Autor p = new Autor("Rookemaker","Dourados",19,"Masculino","Mestre");
+        Livro l = new Livro("A arte nao precisa de explicação",p,"Globo","Sao paulo",1956,2);
         
-        c.Imprimir();
+        
+        l.Imprimir();
     }
 }

@@ -1,30 +1,35 @@
 
 package com.mycompany.registro_livros;
-import java.util.Scanner;
 
-public class Livro extends Autor {
+
+public class Livro {
     
     
-    private String Nome;
-    Autor autor = new Autor();
+    private String NomeLivro;
+    private Autor autor;
     private String Editora;
     private String Cidade;
     private int Ano_de_Fab;
     private int N_Edicao;
 
-    public Livro() {}
-   
-    public Livro(String Nome, String Autor, String Editora, String Cidade, int Ano_de_Fab, int N_Edicao) {
-        this.Nome = Nome;
-        
-        this.Editora = Editora;
-        this.Cidade = Cidade;
-        this.Ano_de_Fab = Ano_de_Fab;
-        this.N_Edicao = N_Edicao;
+ 
+    public Livro(String nomeLivro, Autor autor, String editora, String cidade, int ano_de_Fab, int n_Edicao) {
+        NomeLivro = nomeLivro;
+        this.autor = autor;
+        Editora = editora;
+        Cidade = cidade;
+        Ano_de_Fab = ano_de_Fab;
+        N_Edicao = n_Edicao;
     }
-     public void Imprimir(){       
-        System.out.println("Nome: "+Nome);
-        System.out.println("Autor: "+Autor);
+
+
+
+
+
+
+    public void Imprimir(){       
+        System.out.println("Nome: "+NomeLivro);
+        System.out.println("Autor: "+ getAutor());
         System.out.println("Editora: "+Editora);
         System.out.println("Cidade: "+Cidade);
         System.out.println("Ano de fabricação "+Ano_de_Fab);
@@ -32,53 +37,63 @@ public class Livro extends Autor {
         
     }
 
-    public String getNome() {
-        return Nome;
+
+
+
+
+
+    public String getNomeLivro() {
+        return NomeLivro;
     }
 
-    public String getAutor() {
-        return Autor;
+    public void setNomeLivro(String nomeLivro) {
+        NomeLivro = nomeLivro;
+    }
+
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
     }
 
     public String getEditora() {
         return Editora;
     }
 
-    public String getCidade() {
-        return Cidade;
-    }
-
-    public int getAno_de_Fab() {
-        return Ano_de_Fab;
-    }
-
-    public int getN_Edicao() {
-        return N_Edicao;
-    }
-
-    public void setNome(String nome) {
-        Nome = nome;
-    }
-
-    public void setAutor(String autor) {
-        Autor = autor;
-    }
-
     public void setEditora(String editora) {
         Editora = editora;
+    }
+
+    public String getCidade() {
+        return Cidade;
     }
 
     public void setCidade(String cidade) {
         Cidade = cidade;
     }
 
+
+    public int getAno_de_Fab() {
+        return Ano_de_Fab;
+    }
+
+
     public void setAno_de_Fab(int ano_de_Fab) {
         Ano_de_Fab = ano_de_Fab;
     }
 
+
+    public int getN_Edicao() {
+        return N_Edicao;
+    }
+
+
     public void setN_Edicao(int n_Edicao) {
         N_Edicao = n_Edicao;
     }
-    
-    
+
+ 
 }
