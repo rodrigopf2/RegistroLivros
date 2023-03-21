@@ -29,7 +29,7 @@ public class Livro {
 
     public void Imprimir(){       
         System.out.println("Nome: "+NomeLivro);
-        System.out.println("Autor: "+ getAutor());
+        System.out.println("Autor: "+ autor.getNome());
         System.out.println("Editora: "+Editora);
         System.out.println("Cidade: "+Cidade);
         System.out.println("Ano de fabricação "+Ano_de_Fab);
