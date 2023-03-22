@@ -1,8 +1,9 @@
 
 package com.mycompany.registro_livros;
 
+import INterfaces.CSVGenerator;
 
-public class Livro {
+public class Livro implements CSVGenerator{
     
     
     private String NomeLivro;
@@ -93,6 +94,16 @@ public class Livro {
 
     public void setN_Edicao(int n_Edicao) {
         N_Edicao = n_Edicao;
+    }
+
+
+
+
+
+
+    @Override
+    public String generateCSV() {
+        return this.NomeLivro+";"+autor.getNome()+";"+this.Cidade+";"+this.Editora+";"+this.Ano_de_Fab;
     }
 
  

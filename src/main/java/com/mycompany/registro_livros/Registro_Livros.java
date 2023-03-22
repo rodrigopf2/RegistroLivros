@@ -2,6 +2,7 @@
 
 package com.mycompany.registro_livros;
 
+import INterfaces.CSVGenerator;
 
 public class Registro_Livros {
 
@@ -11,6 +12,8 @@ public class Registro_Livros {
         Livro l = new Livro("A arte nao precisa de explicação",p,"Globo","Sao paulo",1956,2);
         
         
-        l.Imprimir();
+        CSVGenerator csv = l;
+
+        System.out.println(csv.generateCSV());
     }
 }
